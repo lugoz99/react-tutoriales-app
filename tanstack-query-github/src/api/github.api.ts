@@ -1,6 +1,11 @@
-// import axios from "axios";
+import axios from "axios";
 
 
-// export const githubApi = () =>{
-//   baseUrl : import.meta.env.VITE_API_URL
-// }
+
+export const githubApi = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+  headers:{
+    // todo: api_keys
+    Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`
+  }
+})

@@ -17,17 +17,22 @@ Repositorio del proyecto del curso sobre TanStack Query con React
 - React Icons
 
 
----
-| Paso              | Comando                                                                     |
-| ----------------- | --------------------------------------------------------------------------- |
-| Crear rama orphan | `git checkout --orphan tanstack-query-issues-main`                          |
-| Limpiar index     | `git rm -rf .`                                                              |
-| Copiar proyecto   | `Copy-Item tanstack-query-issues-main\* -Destination . -Recurse`            |
-| Commit inicial    | `git add .`<br>`git commit -m "Initial commit: tanstack-query-issues-main"` |
-| Subir a GitHub    | `git push -u origin tanstack-query-issues-main`                             |
-| Volver a main     | `git checkout main`                                                         |
+| Paso | Comando | Qué hace |
+|------|---------|----------|
+| 1 | `git checkout --orphan nombre-rama` | Crea nueva rama independiente |
+| 2 | `git rm -rf .` | Limpia el área de preparación |
+| 3 | `git add carpeta-proyecto/*` | Agrega solo esa carpeta |
+| 4 | `git commit -m "Descripción del proyecto"` | Guarda los cambios |
+| 5 | `git push origin nombre-rama` | Sube la rama a GitHub |
+```
 
----
+**Ejemplo real:**
+```
+git checkout --orphan hero-app
+git rm -rf .
+git add hero-app/*
+git commit -m "Proyecto hero-app"
+git push origin hero-app
 
 | Acción                   | Comando                                   |
 | ------------------------ | ----------------------------------------- |
